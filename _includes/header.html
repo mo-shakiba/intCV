@@ -7,7 +7,7 @@
       <h1>{{ site.name | escape }}</h1>
       <h2>{{ site.title | escape }}</h2>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-left">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
       <ul class="icons no-print">
         {%- if site.email -%}
           <li>
@@ -18,24 +18,24 @@
         {%- endif -%}
         {%- if site.googlescholar_username -%}
           <li>
-            <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
+            <a title="GoogleScholar" target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username | escape }}" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-google-scholar" title="GoogleScholar"></i>
             </a>
           </li>
         {%- endif -%}
-        {%- if site.linkedin_username -%}
+        {%- if site.in_username -%}
           <li>
-            <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+            <a title="LinkedIn" target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}/" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.github_username -%}
           <li>
-            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-github" title="Github link"></i>
+            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}/" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-github" title="GitHub"></i>
             </a>
-          </li>
+          </li> 
         {%- endif -%}
       </ul>
     </div>
