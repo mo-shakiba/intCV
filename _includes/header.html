@@ -6,6 +6,13 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
       <ul class="icons no-print">
+        {%- if site.email -%}
+          <li>
+            <a title="Email" target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
+              <i class="fa-solid fa-envelope" title="Email"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {%- if site.dribbble_username -%}
           <li>
             <a target="_blank" href="https://dribbble.com/{{ site.dribbble_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
@@ -27,13 +34,6 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.github_username -%}
-          <li>
-            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-github" title="Github link"></i>
-            </a>
-          </li>
-        {%- endif -%}
         {%- if site.stackoverflow_username -%}
           <li>
             <a target="_blank" href="https://stackoverflow.com/users/{{ site.stackoverflow_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
@@ -48,10 +48,17 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.googlescholar_username -%}
+          <li>
+            <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-google-scholar" title="GoogleScholar"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {%- if site.linkedin_username -%}
           <li>
             <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-linkedin" title="Linkedin link"></i>
+              <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
             </a>
           </li>
         {%- endif -%}
@@ -90,10 +97,10 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.googlescholar_username -%}
+        {%- if site.github_username -%}
           <li>
-            <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-google" title="Google scholar link"></i>
+            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fab fa-github" title="Github link"></i>
             </a>
           </li>
         {%- endif -%}
