@@ -1,5 +1,5 @@
 <div class="container footer-container">
   <p>
-    {{ site.name | escape }} <a title="ORCiD" href="https://orcid.org/{{ site.orcid_username }}" target="_blank">({{ site.orcid_username | escape }})</a>
+    {{ site.name | escape }} {%- if site.orcid_username -%} <a title="ORCiD" href="https://orcid.org/{{ site.orcid_username }}" target="_blank">({{ site.orcid_username | escape }})</a> {%- endif -%}
   </p>
 </div>
